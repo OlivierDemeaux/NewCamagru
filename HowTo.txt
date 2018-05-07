@@ -1,0 +1,2 @@
+First, set up the config file, with database.php and setup.php.
+Then we start the session and check if the id is already known from us.
