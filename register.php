@@ -51,6 +51,7 @@
     <title>Camagru</title>
   </head>
   <body>
+    <?php include('header.php'); ?>
     <div>
       <form action="register.php" method="post">
     			<input class="login" type="email" name="email" placeholder="Email" required />

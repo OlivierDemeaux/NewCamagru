@@ -6,6 +6,7 @@ html
 body
 {
   min-height: 100%;
+  background-image: url("./images/poly2.jpg");
 }
 *
 {
@@ -15,24 +16,74 @@ body
 a
 {
 	text-decoration: none;
-  color: white;
+  color: black;
+  margin: 15px;
 }
 div.header
 {
   background-color: #9933cc;
-  color: #ffffff;
   padding: 15px;
 }
-div.bod
-{
-  background-color: #2211cc;
-  color: #ffffff;
-  padding: 15px;
-}
+
 div.box_big_message
 {
 	margin: 0 auto;
 	margin-top: 100px;
 	text-align: center;
 	font-size: 25px;
+  width: 100%;
+}
+div.description
+{
+  margin: 0 auto;
+  margin-top: 50px;
+  text-align: center;
+  font-size: 25px;
+}
+div.photobooth
+{
+  text-align: center;
+}
+
+div.leftwindow
+{
+  float: left;
+  width: 300px;
+  height: 700px;
+  font-size: 20px;
+  padding-top: 50px;
+  border-radius: 10px;
+  line-height: 500%;
+  text-align: center;
+  border-radius: 10px;
+  background-image: url("./images/poly.jpg");
+  display:inline-block;
+  vertical-align: top;
+  margin-top: 100px;
+  margin-left: 10px;
+  border: 4px solid #9933cc;
+}
+div.rightwindow
+{
+  float: right;
+  width: 300px;
+  height: 700px;
+  font-size: 20px;
+  padding-top: 50px;
+  border-radius: 10px;
+  line-height: 500%;
+  text-align: center;
+  background-image: url("./images/poly.jpg");
+  display:inline-block;
+  vertical-align: top;
+  margin-top: 100px;
+  margin-right: 10px;
+  border: 4px solid #9933cc;
+}
+a.panel
+{
+  background-image: url("./images/poly.jpg");
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 6px;
 }

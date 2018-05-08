@@ -1,14 +1,23 @@
+<?php include_once('head.php')?>
 <div class="header">
   <ul>
   <a href="/">Camagru</a>
-  <a href="./register.php">Register</a>
-  <a href="./login.php">Login</a>
+  <?php
+      if ($_SESSION['id'] == "new_user")
+      {
+        ?>
+        <a href="./register.php">Register</a>
+        <a href="./login.php">Login</a>
+        <?php
+      }
+      ?>
   <?php
       if ($_SESSION['id'] != "new_user")
       {
         ?>
-        <a href="./photobooth.php">PhotoBooth</a>
         <a href="./account.php">Account</a>
+          <a href="./change_pass.php">Change Password</a>
+        <a href="./logout.php">Logout</a>
         <?php
       }
   ?>

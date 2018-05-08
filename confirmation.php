@@ -26,6 +26,8 @@ if (isset($_GET['r']) && $_GET['r'] != "")
     <?php include_once('header.php'); ?>
     <div class="box_big_message">
       <?php echo $text; ?>
+      <br/><br/><br/><br/>
+      <a style="color: black;" href="./index.php">Go to the loggin page by clicking here</a>
     </div>
   </body>
 </html>
