@@ -17,7 +17,7 @@
   </div>
 <div class="box_big_message">
   <div class="description">
-    Here you can take pictures of yourself and add some cool filters to it!
+    Here you can take pictures of yourself and <br/>add some cool filters to it!
     </br>
     </br>
     Enjoy!
