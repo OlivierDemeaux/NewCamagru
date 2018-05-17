@@ -2,8 +2,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <title>Camagru</title>
+    <link rel="stylesheet" type="text/css" href="camagru.css">
   </head>
-  <body>
+  <body onload="streaming();">
     <?php include_once('header.php') ?>
     <?php if ($_SESSION['id'] != "new_user")
               include_once('take_pic.php');

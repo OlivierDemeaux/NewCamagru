@@ -16,7 +16,6 @@
       {
         ?>
         <a href="./account.php">Account</a>
-          <a href="./change_pass.php">Change Password</a>
         <a href="./logout.php">Logout</a>
         <?php
       }

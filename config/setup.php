@@ -20,9 +20,9 @@ try
 
   //images
   $bdd->query("CREATE TABLE images(
-				id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
-				creator INT UNSIGNED NOT NULL,
-				creation INT UNSIGNED NOT NULL)");
+  				id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,
+  				creator INT UNSIGNED NOT NULL,
+  				creation INT UNSIGNED NOT NULL)");
 
   header('Location: /');
   exit;

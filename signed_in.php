@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Camagru</title>
-	<link rel="stylesheet" type="text/css" href="css.css">
+	<link rel="stylesheet" type="text/css" href="camagru.css">
 </head>
 <body>
 	<?php include('header.php'); ?>

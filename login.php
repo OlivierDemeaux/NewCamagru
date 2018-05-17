@@ -34,14 +34,16 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
     <link rel="stylesheet" type="text/css" href="camagru.css">
   </head>
   <body>
-      <?php include('header.php'); ?>
-      <form action="signin.php" method="post">
-			<input class="login" type="text" name="login" placeholder="Login" required />
-			<br />
-			<input class="login" type="password" name="password" placeholder="Password" required />
-			<br />
-			<br />
-			<input class="submit" type="submit" value="Sign In" />
-		</form>
+    <?php include('header.php'); ?>
+			<div class="login_box">
+      	<form action="signin.php" method="post">
+					<input class="login" type="text" name="login" placeholder="Login" required />
+					<br />
+					<input class="login" type="password" name="password" placeholder="Password" required />
+					<br />
+					<br />
+					<input class="submit" type="submit" value="Sign In" />
+				</form>
+			</div>
   </body>
 </html>

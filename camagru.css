@@ -29,15 +29,62 @@ div.header
   padding: 15px;
   font-family: roboto;
 }
+input.login
+{
+  font-size: 20px;
+	width: 300px;
+  height: 30px;
+	margin-bottom: 2px;
+  margin-top: 4px;
+  text-align: center;
+}
+input.submit
+{
+  width: 90px;
+  box-sizing: border-box;
+}
+
+div.login_box
+{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 100px;
+	width: 300px;
+}
 
 div.box_big_message
 {
 	margin: 0 auto;
-	margin-top: 100px;
+	margin-top: 20px;
 	text-align: center;
 	font-size: 25px;
   width: 100%;
 }
+img.filtre
+{
+	width: 640px;
+	height: 480px;
+	position: absolute;
+	display: none;
+}
+canvas.picture
+{
+  display: block;
+  margin: 0 auto;
+}
+div.camera
+{
+  display: block;
+  margin: 0 auto;
+	width: 680px;
+	height: 480px;
+}
+video.camera
+{
+	width: 680px;
+	height: 480px;
+}
+
 div.description
 {
   margin: 0 auto;
@@ -50,16 +97,8 @@ div.description
 div.photobooth
 {
   text-align: center;
+  align-items: center;
 }
-
-div.login_box
-{
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 100px;
-	width: 300px;
-}
-
 div.leftwindow
 {
   float: left;
@@ -95,6 +134,30 @@ div.rightwindow
   margin-right: 10px;
   border: 4px solid #9933cc;
 }
+div.items
+{
+  margin-top: 20px;
+	height: 100px;
+	width: 100%;
+}
+img.item
+{
+	float: left;
+	cursor: pointer;
+	width: 120px;
+	height: 120px;
+	margin-left: 100px;
+	margin-top: 20px;
+}
+img.item2
+{
+	float: left;
+	cursor: pointer;
+	width: 120px;
+	height: 120px;
+	margin-left: 100px;
+	margin-top: 20px;
+}
 a.panel
 {
   background-image: url("./images/poly.jpg");
@@ -103,4 +166,11 @@ a.panel
   color: white;
   border-radius: 6px;
   font-family: roboto;
+}
+span.error_msg
+{
+  font-size: 20px;
+	display: none;
+	color: red;
+  margin-bottom: 10px;
 }

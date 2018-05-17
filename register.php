@@ -13,7 +13,7 @@
     else if (!preg_match("#[0-9]+#", $_POST['password']))
         echo "Password must include at least a number";
     else if (!preg_match("#[a-zA-Z]+#", $_POST['password']))
-        echo "Password must include at least a letter";
+        echo "<style>Password must include at least a letter</style>";
     else
     {
           $req = $bdd->prepare('SELECT id FROM users WHERE login = ?');
@@ -38,7 +38,7 @@
         			$data = $req->fetch();
         			$msg = 'To validate your account please click on the following link : http://localhost:8080/confirmation.php?r='.$data['id'];
         			mail($_POST['email'], 'Account confirmation', $msg);
-        			echo "Congratulation, your account has been created. We sent you an email with details. You will have to activate your account by clicking the email in the email.";
+        			header('Location: ./redirect/register_redirect.php');
         			exit;
           }
       }
@@ -49,10 +49,11 @@
   <head>
     <meta charset="utf-8">
     <title>Camagru</title>
+    <link rel="stylesheet" type="text/css" href="camagru.css">
   </head>
   <body>
-    <?php include('header.php'); ?>
-    <div>
+    <?php include('./header.php'); ?>
+    <div class="login_box">
       <form action="register.php" method="post">
     			<input class="login" type="email" name="email" placeholder="Email" required />
     			<br />
