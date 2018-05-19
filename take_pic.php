@@ -26,43 +26,23 @@
 <div class = "bottom_display">
   Your Pictures: <br/>
   <?php
-  				// while ($el = $req->fetch())
-  				// {
-  				/*?>
-  				// 	<div id="image<?php echo $el['id'] ?>" class="studio_pictures">
-  				// 		<img class="studio_pictures" src="pictures/<?php echo $el['id'] ?>.png">
-  				// 	</div>
-  				// 	<?php
-  				// }*/
-          $sql = 'SELECT * FROM images WHERE creator= :id';
-          $stmt = $bdd->prepare($sql);
-          $stmt->bindValue(':id', $_SESSION['id']);
-
-          $stmt->execute();
-
-        $a = $stmt->rowCount() / 5;
-        $a = ceil($a);
-
-        $req = $bdd->prepare('SELECT * FROM images WHERE creator = ? ORDER BY creation DESC');
-	      $req->execute(array($_SESSION['id']));
-        $count = 0;
-        while ($el = $req->fetch())
-        {
-          ?>
-  				<div id="image<?php echo $el['id'] ?>" class="studio_pictures">
-            <?php if ($count <= 4)
-            {
-              ?>
-              <img class="studio_pictures" src="pictures/<?php echo $el['id'] ?>.png">
-              <?php   $count = $count + 1;
-            }
-            else ($count = 0);
-            ?>
-  				</div>
-  				<?php
+  				$req = $bdd->prepare('SELECT * FROM images WHERE creator = ? ORDER BY creation DESC');
+  				$req->execute(array($_SESSION['id']));
+  				while ($el = $req->fetch())
+  				{
+  					?>
+  					<div id="image<?php echo $el['id'] ?>" class="studio_pictures">
+  						<img class="studio_pictures" src="pictures/<?php echo $el['id'] ?>.png">
+  					</div>
+  					<?php
   				}
-?>
+          //$sql = 'SELECT * FROM images WHERE creator= :id';
+          //$stmt = $bdd->prepare($sql);
+          //$stmt->bindValue(':id', $_SESSION['id']);
 
+          //$stmt->execute();
+
+          ?>
 </div>
 
   <script>
