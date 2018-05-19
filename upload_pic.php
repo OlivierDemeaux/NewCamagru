@@ -16,6 +16,34 @@ $req = $bdd->prepare('INSERT INTO images (creator, creation) VALUES (:creator, :
 	imagesavealpha($image_1, true);
 	$dw = imagesx($image_1);
 	$dh = imagesy($image_1);
+	if ($_POST['tree'] == 1)
+	{
+		$image_2 = imagecreatefrompng('./images/tree.png');
+		$w = imagesx($image_2);
+		$h = imagesy($image_2);
+		imagecopyresampled($image_1, $image_2, 0, 0, 0, 0, $dw, $dh, $w, $h);
+	}
+	if ($_POST['hat'] == 1)
+	{
+		$image_2 = imagecreatefrompng('images/hat.png');
+		$w = imagesx($image_2);
+		$h = imagesy($image_2);
+		imagecopyresampled($image_1, $image_2, 0, 0, 0, 0, $dw, $dh, $w, $h);
+	}
+	if ($_POST['saiyan'] == 1)
+	{
+		$image_2 = imagecreatefrompng('images/saiyan3.png');
+		$w = imagesx($image_2);
+		$h = imagesy($image_2);
+		imagecopyresampled($image_1, $image_2, 0, 0, 0, 0, $dw, $dh, $w, $h);
+	}
+	if ($_POST['bird'] == 1)
+	{
+		$image_2 = imagecreatefrompng('images/bird.png');
+		$w = imagesx($image_2);
+		$h = imagesy($image_2);
+		imagecopyresampled($image_1, $image_2, 0, 0, 0, 0, $dw, $dh, $w, $h);
+	}
 	imagepng($image_1, 'pictures/'.$id.'.png');
 	header('Content-Type: text/plain');
     ?>

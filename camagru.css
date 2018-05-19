@@ -60,6 +60,21 @@ div.box_big_message
 	font-size: 25px;
   width: 100%;
 }
+
+div.bottom_display
+{
+  text-align: center;
+	margin-top: 20px;
+	font-size: 25px;
+}
+
+img.studio_pictures
+{
+  float: left;
+  width: 200px;
+  height: 150px;
+}
+
 img.filtre
 {
 	width: 640px;
@@ -67,22 +82,37 @@ img.filtre
 	position: absolute;
 	display: none;
 }
+img.filter1
+{
+  width: 330px;
+  height: 250px;
+  position: absolute;
+  margin-right: 200px;
+  padding-left: 200px;
+  align: center;
+  display: none;
+}
 canvas.picture
 {
   display: block;
+  display: none;
   margin: 0 auto;
 }
+
+
 div.camera
 {
-  display: block;
-  margin: 0 auto;
-	width: 680px;
-	height: 480px;
+	width: 640px;
+	height: 500px;
 }
+
 video.camera
 {
-	width: 680px;
-	height: 480px;
+  align: center;
+  display: 0 auto;
+  margin-left: 50px;
+	width: 640px;
+	height: 500px;
 }
 
 div.description
@@ -102,7 +132,7 @@ div.photobooth
 div.leftwindow
 {
   float: left;
-  width: 300px;
+  width: 15%;
   height: 700px;
   font-size: 20px;
   padding-top: 50px;
@@ -163,6 +193,7 @@ a.panel
   background-image: url("./images/poly.jpg");
   border: 1px solid white;
   padding: 10px;
+  display: 0 auto;
   color: white;
   border-radius: 6px;
   font-family: roboto;
