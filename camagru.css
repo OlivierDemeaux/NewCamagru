@@ -19,6 +19,16 @@ a
   color: black;
   margin: 15px;
 }
+span.delete_comment
+{
+	display: block;
+	margin-right: 5px;
+	color: red;
+	font-size: 14px;
+	margin-top: 10px;
+	right: 0;
+	cursor: pointer;
+}
 div.header a
 {
     color: white;
@@ -73,6 +83,7 @@ img.studio_pictures
   float: left;
   width: 200px;
   height: 150px;
+  margin: 1px;
 }
 
 img.filtre
@@ -94,25 +105,19 @@ img.filter1
 }
 canvas.picture
 {
-  display: block;
+  display: inline-block;
   display: none;
-  margin: 0 auto;
 }
 
 
 div.camera
 {
-	width: 640px;
-	height: 500px;
+  display: inline-block;
 }
 
 video.camera
 {
-  align: center;
-  display: 0 auto;
-  margin-left: 50px;
-	width: 640px;
-	height: 500px;
+  display: inline-block;
 }
 
 div.description

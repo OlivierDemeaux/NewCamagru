@@ -1,5 +1,13 @@
 <?php include('connection.php'); ?>
 <?php
+if (isset($_POST['image']) && isset($_POST['tree']) && isset($_POST['hat']) && isset($_POST['saiyan']) && isset($_POST['bird']) && $_POST['image'] != "" && $_POST['tree'] != "" && $_POST['hat'] != "" && $_POST['bird'] != "" && $_POST['saiyan'] != "" && $_SESSION['id'] != 'new_user')
+{
+	if ($_POST['tree'] == 0 && $_POST['hat'] == 0 && $_POST['saiyan'] == 0 && $_POST['bird'] == 0)
+	{
+		echo "error";
+		exit;
+	}
+}
 $req = $bdd->prepare('INSERT INTO images (creator, creation) VALUES (:creator, :creation)');
 	$req->execute(array(
 		'creator' => $_SESSION['id'],
@@ -46,4 +54,10 @@ $req = $bdd->prepare('INSERT INTO images (creator, creation) VALUES (:creator, :
 	}
 	imagepng($image_1, 'pictures/'.$id.'.png');
 	header('Content-Type: text/plain');
+	?>
+	<div id="image<?php echo $id ?>" class="studio_pictures">
+		<img class="studio_pictures" src="pictures/<?php echo $id ?>.png">
+		<span style="margin-top: -2px" onclick="deleteImage(<?php echo $id ?>)" class="delete_comment">delete</span>
+	</div>
+	<?php
     ?>

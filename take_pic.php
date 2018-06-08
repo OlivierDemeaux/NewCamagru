@@ -18,13 +18,15 @@
     <img id="saiyan_filtre" src="./images/saiyan3.png" class="filtre">
     <img id="bird_filtre" src="./images/bird.png" class="filtre">
     <video class="camera" id="camera"></video>
+
+    <canvas class="picture" id="canvas"></canvas>
+    </br>
+    <button onclick="photo();">Prendre une photo</button>
   </div>
-  <canvas class="picture" id="canvas"></canvas>
-  </br>
-  <button onclick="photo();">Prendre une photo</button></div>
-</br></br></br></br></br></br></br></br></br>
+  </br></br></br></br></br></br></br></br></br>
 <div class = "bottom_display">
   Your Pictures: <br/>
+  <div class="studio_galery" id="studio_galery">
   <?php
   				$req = $bdd->prepare('SELECT * FROM images WHERE creator = ? ORDER BY creation DESC');
   				$req->execute(array($_SESSION['id']));
@@ -36,13 +38,8 @@
   					</div>
   					<?php
   				}
-          //$sql = 'SELECT * FROM images WHERE creator= :id';
-          //$stmt = $bdd->prepare($sql);
-          //$stmt->bindValue(':id', $_SESSION['id']);
-
-          //$stmt->execute();
-
           ?>
+      </div>
 </div>
 
   <script>
@@ -55,12 +52,10 @@
   						navigator.mozGetUserMedia;
     if (navigator.getUserMedia)
     		navigator.getUserMedia(constraints, success, failure);
-    else
-    	alert("Your browser does not support getUserMedia()");
   }
     function failure(error)
   {
-	   alert(error);
+	   return;
    }
 
    function success(stream)
@@ -97,7 +92,7 @@
     			var link = xhr.responseText;
     			if (link == "error")
     				return;
-    		//document.getElementById("studio_galery").innerHTML = link + document.getElementById("studio_galery").innerHTML;
+    		document.getElementById("studio_galery").innerHTML = link + document.getElementById("studio_galery").innerHTML;
     		}
     	};
     	xhr.open("POST", "upload_pic.php", true);
@@ -147,6 +142,7 @@ else
 //   document.getElementById("file").disabled = true;
 // }
 }
+
 
       </script>
     </div>
