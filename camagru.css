@@ -19,16 +19,129 @@ a
   color: black;
   margin: 15px;
 }
+<<<<<<< HEAD
+div.photo
+{
+	width: 640px;
+	margin-bottom: 50px;
+	border: 2px solid black;
+}
+
+=======
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 span.delete_comment
 {
 	display: block;
 	margin-right: 5px;
+<<<<<<< HEAD
+	color: black;
+=======
 	color: red;
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 	font-size: 14px;
 	margin-top: 10px;
 	right: 0;
 	cursor: pointer;
 }
+<<<<<<< HEAD
+
+div.new_comment
+{
+  width: 320px;
+}
+
+textarea.new_comment
+{
+  width: 638px;
+}
+
+div.post
+{
+	margin: 0 auto;
+	padding: 2px 5px;
+	border: 2px solid black;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial;
+	cursor: pointer;
+	width: 70px;
+	height: 20px;
+	display: block;
+	color: black;
+	text-align: center;
+	float: right;
+	margin-right: 20px;
+}
+
+div.comment
+{
+	width: 630px;
+	border-bottom: 2px solid black;
+	background-color: #CCC;
+	padding: 5px;
+	word-break: break-all;
+}
+
+img.gallery
+{
+	width: 640px;
+	height: 480px;
+	border-bottom: 2px solid black;
+}
+div.interaction
+{
+	width: 640px;
+	height: 50px;
+	background-image: url("./images/poly.jpg");
+	margin-top: -4px;
+	line-height: 50px;
+	border-bottom: 2px solid black;
+}
+
+img.likes
+{
+	cursor: pointer;
+	height: 40px;
+	width: 40px;
+	margin-top: 5px;
+	margin-left: 10px;
+	float: left;
+}
+
+span.likes
+{
+	float: left;
+	color: white;
+	margin-left: 10px;
+	font-size: 30px;
+	font-family: CAndL;
+}
+
+img.comments
+{
+	height: 40px;
+	width: 40px;
+	margin-top: 5px;
+	margin-right: 10px;
+	float: right;
+}
+
+div.comments
+{
+	width: 640px;
+}
+
+span.comments
+{
+	float: right;
+	color: white;
+	margin-right: 10px;
+	font-size: 30px;
+	font-family: CAndL;
+}
+
+=======
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 div.header a
 {
     color: white;
@@ -84,6 +197,10 @@ img.studio_pictures
   width: 200px;
   height: 150px;
   margin: 1px;
+<<<<<<< HEAD
+  border-radius: 8px;
+=======
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 }
 
 img.filtre
@@ -92,6 +209,17 @@ img.filtre
 	height: 480px;
 	position: absolute;
 	display: none;
+}
+div.studio_pictures
+{
+	width: 202px;
+	margin: 0 auto;
+	margin-top: 25px;
+	border: 1px solid black;
+	border-radius: 10px;
+  display: inline-block;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 img.filter1
 {
@@ -165,7 +293,6 @@ div.rightwindow
   background-image: url("./images/poly.jpg");
   display:inline-block;
   vertical-align: top;
-  margin-top: 100px;
   margin-right: 10px;
   border: 4px solid #9933cc;
 }

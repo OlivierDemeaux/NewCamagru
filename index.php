@@ -3,6 +3,7 @@
 <html>
   <head>
     <title>Camagru</title>
+    <script src="camagruJS.js"></script>
     <link rel="stylesheet" type="text/css" href="camagru.css">
   </head>
   <body onload="streaming();">
@@ -10,6 +11,8 @@
     <?php if ($_SESSION['id'] != "new_user")
               include_once('take_pic.php');
           else
-              include_once('main_Page.php');?>
+              include_once('main_Page.php');
+
+      ?>
   </body>
 </html>

@@ -1,18 +1,19 @@
-<div class="rightwindow">
-    <div class="items">
-				<img onclick="selectItem('tree');" id="tree" src="images/tree2.png" class="item">
-				<img onclick="selectItem('hat');" id="hat" src="images/hat2.png" class="item">
-				<img onclick="selectItem('saiyan');" id="saiyan" src="images/saiyan2.png" class="item">
-        <img onclick="selectItem('bird');" id="bird" src="images/bird2.png" class="item">
-				<input onchange="uploaded(this);" disabled="disabled" id="file" class="upload" type="file" name="file">
-			</div>
-</div>
-<div class="box_big_message">
-  <div class="description">
-    Here you can take pictures of yourself and <br/>add some cool filters to it!
-  </br></br>
-  </div>
-  <div class="camera">
+<?php include('connection.php'); ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Camagru</title>
+    <script scr="camagruJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="camagru.css">
+  </head>
+  <body>
+    <div class="box_big_message">
+      <div class="description">
+          Here you can take pictures of yourself and <br/>add some cool filters to it!
+          </br></br>
+      </div>
+    <div class="camera">
     <img id="tree_filtre" src="./images/tree.png" class="filtre">
     <img id="hat_filtre" src="./images/hat.png" class="filtre">
     <img id="saiyan_filtre" src="./images/saiyan3.png" class="filtre">
@@ -23,7 +24,21 @@
     </br>
     <button onclick="photo();">Prendre une photo</button>
   </div>
+<<<<<<< HEAD
+  <div class="rightwindow">
+      <div class="items">
+  				<img onclick="selectItem('tree');" id="tree" src="images/tree2.png" class="item">
+  				<img onclick="selectItem('hat');" id="hat" src="images/hat2.png" class="item">
+  				<img onclick="selectItem('saiyan');" id="saiyan" src="images/saiyan2.png" class="item">
+          <img onclick="selectItem('bird');" id="bird" src="images/bird2.png" class="item">
+  				<input onchange="uploaded(this);" disabled="disabled" id="file" class="upload" type="file" name="file">
+  			</div>
+  </div>
   </br></br></br></br></br></br></br></br></br>
+
+=======
+  </br></br></br></br></br></br></br></br></br>
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 <div class = "bottom_display">
   Your Pictures: <br/>
   <div class="studio_galery" id="studio_galery">
@@ -35,12 +50,15 @@
   					?>
   					<div id="image<?php echo $el['id'] ?>" class="studio_pictures">
   						<img class="studio_pictures" src="pictures/<?php echo $el['id'] ?>.png">
+              <span style="display: inblock" onclick="deleteImage(<?php echo $el['id'] ?>)" class="delete_comment">delete</span>
   					</div>
   					<?php
   				}
           ?>
       </div>
 </div>
+<<<<<<< HEAD
+=======
 
   <script>
   function streaming()
@@ -146,4 +164,7 @@ else
 
       </script>
     </div>
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 </div>
+</body>
+</html>

@@ -57,7 +57,11 @@ $req = $bdd->prepare('INSERT INTO images (creator, creation) VALUES (:creator, :
 	?>
 	<div id="image<?php echo $id ?>" class="studio_pictures">
 		<img class="studio_pictures" src="pictures/<?php echo $id ?>.png">
+<<<<<<< HEAD
+		<span style="display: inblock" onclick="deleteImage(<?php echo $id ?>)" class="delete_comment">delete</span>
+=======
 		<span style="margin-top: -2px" onclick="deleteImage(<?php echo $id ?>)" class="delete_comment">delete</span>
+>>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 	</div>
 	<?php
     ?>

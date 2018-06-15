@@ -26,3 +26,17 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
 		echo "Wrong password";
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Camagru</title>
+	<link rel="stylesheet" type="text/css" href="camagru.css">
+</head>
+<body>
+	<?php include('header.php'); ?>
+	<div class="box_big_message">
+		You need to sign in or log in if you want to like a picture
+	</div>
+</body>
+</html>
