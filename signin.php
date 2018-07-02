@@ -22,8 +22,6 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
 			exit;
 		}
 	}
-	else
-		echo "Wrong password";
 }
 ?>
 <!DOCTYPE html>
@@ -34,9 +32,10 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
 	<link rel="stylesheet" type="text/css" href="camagru.css">
 </head>
 <body>
-	<?php include('header.php'); ?>
+	<?php include('header.php'); ?></br></br></br>
 	<div class="box_big_message">
 		You need to sign in or log in if you want to like a picture
 	</div>
 </body>
 </html>
+<?php include_once('footer.php') ?>

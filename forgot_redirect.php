@@ -4,13 +4,13 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Camagru</title>
+	<script src="camagruJS.js"></script>
 	<link rel="stylesheet" type="text/css" href="camagru.css">
 </head>
 <body>
-	<?php include('header.php'); ?>
-	</br></br>
+	<?php include('header.php'); ?></br></br>
 	<div class="box_big_message">
-		You can't access this page if you are signed in.
+		Your new password has been sent to you, check your emails.
 	</div>
 </body>
 </html>

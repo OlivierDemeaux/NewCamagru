@@ -1,5 +1,15 @@
 <?php include('connection.php'); ?>
-<?php
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Camagru</title>
+    <script src="camagruJS.js"></script>
+    <link rel="stylesheet" type="text/css" href="camagru.css">
+  </head>
+  <body>
+    <?php include_once('header.php'); ?></br></br>
+    <?php
 $text = "This account could not be confirmed.";
 if ($_SESSION['id'] != "new_user")
       $text = "You can't access this page if you are already registered.";
@@ -15,19 +25,11 @@ if (isset($_GET['r']) && $_GET['r'] != "")
 	}
 }
 ?>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Camagru</title>
-    <link rel="stylesheet" type="text/css" href="camagru.css">
-  </head>
-  <body>
-    <?php include_once('header.php'); ?>
     <div class="box_big_message">
       <?php echo $text; ?>
       <br/><br/><br/><br/>
-      <a style="color: black;" href="./index.php">Go to the loggin page by clicking here</a>
+      <a style="color: black;" href="./login.php">Go to the loggin page by clicking here</a>
     </div>
   </body>
 </html>
+<?php include_once('footer.php') ?>

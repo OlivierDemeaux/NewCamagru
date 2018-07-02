@@ -4,16 +4,16 @@
   <head>
     <meta charset="utf-8">
     <title>Camagru</title>
-    <script scr="camagruJS.js"></script>
+    <script src="camagruJS.js"></script>
     <link rel="stylesheet" type="text/css" href="camagru.css">
   </head>
   <body>
-      <?php include_once('header.php'); ?>
+      <?php include_once('header.php'); ?> </br></br></br></br>
+			<div id="galery" class="galery">
       <?php
-      	$start = intval($_POST['limit']);
-      	$req = $bdd->prepare('SELECT * FROM images ORDER BY creation DESC LIMIT ?, 5');
-      	$req->bindParam(1, $start, PDO::PARAM_INT);
-      	$req->execute();
+      	$req = $bdd->prepare('SELECT * FROM images ORDER BY creation DESC LIMIT 5');
+      	$req->execute(array());
+        $num = 0;
           while ($el = $req->fetch())
           {
             $reqb = $bdd->prepare('SELECT id FROM likes WHERE image = ?');
@@ -25,9 +25,10 @@
             $reqb = $bdd->prepare('SELECT id FROM likes WHERE image = ? AND creator = ?');
   			    $reqb->execute(array($el['id'], $_SESSION['id']));
   			    $me = $reqb->rowCount();
-            $src = "images/like.png";
+            $src = "images/like.svg";
             if ($me == 1)
-  				      $src = "images/liked.png";
+  				      $src = "images/liked.svg";
+            $num = $num + 1;
             ?>
             <div class="photo">
         			<img class="galery" src="pictures/<?php echo $el['id'] ?>.png">
@@ -64,12 +65,20 @@
         			</div>
         			<div class="new_comment">
         				<textarea placeholder="Your comment" class="new_comment" id="new_comment<?php echo $el['id'] ?>"></textarea>
-        				<div onclick="postComment(<?php echo $el['id'] ?>);" class="post">POST</div>
+        				<div onclick="postComment(<?php echo $el['id'] ?>)" class="post">POST</div>
         			</div>
         		</div>
         		<?php
         }
-
         ?>
+				</div>
+        <?php
+        print $num;
+        if ($num > 4)
+        { ?>
+          <div onclick="loadImage();" class="more">MORE</div>
+        <?php
+        }
+      ?>
       </body>
     </html>

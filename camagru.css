@@ -5,8 +5,23 @@ html
 }
 body
 {
-  min-height: 100%;
-  background-image: url("./images/poly2.jpg");
+  width: 100%;
+height: 100%;
+border: 0;
+margin: 0;
+padding: 0;
+position: absolute;
+background-color: white;
+background-image: url("./images/poly2.jpg");
+background-size: cover;
+background-position: center center;
+background-attachment: fixed;
+background-repeat: no-repeat;
+position: relative;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+
 }
 *
 {
@@ -19,31 +34,49 @@ a
   color: black;
   margin: 15px;
 }
-<<<<<<< HEAD
+
+div.forgot
+{
+  text-align: center;
+}
+div.more
+{
+	margin: 0 auto;
+	padding: 2px 5px;
+	border: 2px solid red;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: Arial;
+	cursor: pointer;
+	width: 150px;
+	height: 20px;
+	display: block;
+	color: red;
+	text-align: center;
+}
+
 div.photo
 {
 	width: 640px;
+  margin: 0 auto;
 	margin-bottom: 50px;
-	border: 2px solid black;
 }
 
-=======
->>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
+img.galery
+{
+  width: 100%;
+}
+
 span.delete_comment
 {
-	display: block;
+	display: block;1
 	margin-right: 5px;
-<<<<<<< HEAD
-	color: black;
-=======
-	color: red;
->>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
+	color: white;
 	font-size: 14px;
 	margin-top: 10px;
 	right: 0;
 	cursor: pointer;
 }
-<<<<<<< HEAD
 
 div.new_comment
 {
@@ -55,11 +88,18 @@ textarea.new_comment
   width: 638px;
 }
 
+div.notification
+{
+	width: 150px;
+	height: 70px;
+	display: block;
+}
+
 div.post
 {
 	margin: 0 auto;
 	padding: 2px 5px;
-	border: 2px solid black;
+	border: 2px solid white;
 	font-size: 20px;
 	font-weight: bold;
 	font-family: Arial;
@@ -67,17 +107,16 @@ div.post
 	width: 70px;
 	height: 20px;
 	display: block;
-	color: black;
+	color: white;
+  float: left;
 	text-align: center;
-	float: right;
-	margin-right: 20px;
 }
 
 div.comment
 {
 	width: 630px;
 	border-bottom: 2px solid black;
-	background-color: #CCC;
+	background-color: white;
 	padding: 5px;
 	word-break: break-all;
 }
@@ -140,8 +179,6 @@ span.comments
 	font-family: CAndL;
 }
 
-=======
->>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 div.header a
 {
     color: white;
@@ -151,6 +188,25 @@ div.header
   background-color: #9933cc;
   padding: 15px;
   font-family: roboto;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+div.footer b
+{
+  background-color: #9933cc;
+  font-family: roboto;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+  z-index: 5;
+}
+
+a.section_footer2
+{
+  float: right;
 }
 input.login
 {
@@ -163,7 +219,7 @@ input.login
 }
 input.submit
 {
-  width: 90px;
+  width: 150px;
   box-sizing: border-box;
 }
 
@@ -197,10 +253,7 @@ img.studio_pictures
   width: 200px;
   height: 150px;
   margin: 1px;
-<<<<<<< HEAD
   border-radius: 8px;
-=======
->>>>>>> fedb7d06c3c6af3bdc8aa9a3394a7d4c5196999e
 }
 
 img.filtre
@@ -320,12 +373,33 @@ img.item2
 	margin-left: 100px;
 	margin-top: 20px;
 }
+
+input.upload
+{
+	float: right;
+	width: 150px;
+	margin-right: 25px;
+	height: 20px;
+	margin-top: 40px;
+}
+
 a.panel
 {
   background-image: url("./images/poly.jpg");
   border: 1px solid white;
   padding: 10px;
   display: 0 auto;
+  color: white;
+  border-radius: 6px;
+  font-family: roboto;
+}
+div.on_off
+{
+  background-image: url("./images/poly.jpg");
+  border: 1px solid white;
+	padding: 10px;
+	width: 150px;
+	display: inline;
   color: white;
   border-radius: 6px;
   font-family: roboto;

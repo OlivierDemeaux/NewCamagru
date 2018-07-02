@@ -1,5 +1,8 @@
 <?php
 include_once('database.php');
+if (!file_exists('../pictures')) {
+    mkdir("../pictures");
+}
 try
 {
   $bdd = new PDO($DB_DSN, $DB_USER, $DB_PASSWORD);

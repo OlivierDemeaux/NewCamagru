@@ -35,6 +35,7 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
   </head>
   <body>
     <?php include('header.php'); ?>
+	</br>
 			<div class="login_box">
       	<form action="signin.php" method="post">
 					<input class="login" type="text" name="login" placeholder="Login" required />
@@ -42,8 +43,10 @@ if (isset($_POST['login']) && isset($_POST['password']) && $_POST['login'] != ""
 					<input class="login" type="password" name="password" placeholder="Password" required />
 					<br />
 					<br />
-					<input class="submit" type="submit" value="Sign In" />
+					<input class="submit" type="submit" value="Sign In" /> </br></br>
+					<a href="forgot.php">I forgot my password</a>
 				</form>
 			</div>
   </body>
 </html>
+<?php include_once('footer.php') ?>

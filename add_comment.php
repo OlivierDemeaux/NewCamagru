@@ -28,9 +28,9 @@ if (isset($_POST['id']) && $_POST['id'] != "" && isset($_POST['comment']) && $_P
 	$req = $bdd->prepare('SELECT creator FROM images WHERE id = ?');
 	$req->execute(array($_POST['id']));
 	$datab = $req->fetch();
-	//$req = $bdd->prepare('SELECT email, notification FROM users WHERE id = ?');
-	//$req->execute(array($datab['creator']));
-	//$datab = $req->fetch();
+	$req = $bdd->prepare('SELECT email, notification FROM users WHERE id = ?');
+	$req->execute(array($datab['creator']));
+	$datab = $req->fetch();
 	$msg = $data['login']." commented one of your images.";
 	if ($datab['notification'] == 1)
 		mail($datab['email'], 'New comment', $msg);
